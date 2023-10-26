@@ -45,6 +45,13 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    //coroutine
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2")
+
+    //for retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     // Add Glide dependencies
     implementation("com.github.bumptech.glide:glide:4.12.0")

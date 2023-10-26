@@ -8,13 +8,19 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
-class WeatherAdapter(private val weatherList: List<Group>) : RecyclerView.Adapter<WeatherAdapter.ViewHolder>() {
+class WeatherAdapter(private val weatherList: MutableList<WeatherModal>) : RecyclerView.Adapter<WeatherAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val cityText: TextView = itemView.findViewById(R.id.CityText)
-        val tempText: TextView = itemView.findViewById(R.id.TempText)
         val timeText: TextView = itemView.findViewById(R.id.TimeText)
+        val tempText: TextView = itemView.findViewById(R.id.TempText)
         val weatherIcon: ImageView = itemView.findViewById(R.id.WeatherIcon)
+        val cityText: TextView = itemView.findViewById(R.id.CityText)
+    }
+
+    fun updateList(newList: List<WeatherModal>) {
+        weatherList.clear()
+        weatherList.addAll(newList)
+        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,14 +30,20 @@ class WeatherAdapter(private val weatherList: List<Group>) : RecyclerView.Adapte
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = weatherList[position]
-
+        currentItem.temperature = currentItem.temperature + "°C"
         holder.cityText.text = currentItem.city
-        holder.tempText.text = currentItem.temp
         holder.timeText.text = currentItem.time
+        holder.tempText.text = currentItem.temperature
+        // Ensure the URL starts with a protocol (e.g., "https:")
+        val imageUrl = if (currentItem.icon.startsWith("//")) {
+            "https:${currentItem.icon}"
+        } else {
+            currentItem.icon
+        }
 
         // Using Glide to load image from URL into ImageView
         Glide.with(holder.itemView.context)
-            .load(currentItem.img)
+            .load(imageUrl)
             .into(holder.weatherIcon)
     }
 
