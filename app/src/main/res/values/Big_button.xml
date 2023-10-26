@@ -1,0 +1,6 @@
+<resources>
+    <style name="Big_Display" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/Home_Box_Background</item>
+        <item name="cornerRadius">20dp</item>
+    </style>
+</resources>
