@@ -6,10 +6,10 @@
     android:layout_height="170dp">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/BigButton"
         android:layout_width="380dp"
         android:layout_height="165dp"
-        android:backgroundTint="@color/Home_Box_Background"
+        android:backgroundTint="@color/black"
         app:cornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

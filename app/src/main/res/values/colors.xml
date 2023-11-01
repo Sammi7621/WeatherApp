@@ -3,5 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="Home_Box_Background">#232329</color>
+    <color name="day_Time_Chip">#32333E</color>
 
 </resources>

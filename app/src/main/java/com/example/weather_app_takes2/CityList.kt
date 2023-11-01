@@ -45,7 +45,7 @@ object CityList {
 
         // Cities starting with K
                 "Kabul", "Kaduna", "Kagoshima", "Kahului", "Kailua", "Kaiserslautern", "Kalamazoo", "Kaliningrad", "Kanazawa", "Kandahar",
-                "Kandy", "Kanpur", "Kansas City", "Kaohsiung", "Karachi", "Karaganda", "Karamay", "Karlsruhe", "Kathmandu", "Kawasaki",
+                "Kandy", "Kanpur", "Kansas City", "Kaohsiung", "Karachi", "Karaganda", "Karamay", "Karlsruhe", "Kathmandu", "Kawasaki","Kiribati",
 
         // Cities starting with L
                 "La Paz", "Lahore", "Lakewood", "Lancaster", "Lansing", "Laredo", "Las Vegas", "Launceston", "Leeds", "Leicester",

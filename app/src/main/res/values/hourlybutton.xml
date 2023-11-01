@@ -1,0 +1,8 @@
+<resources>
+    <style name="HourlyButton">
+        <item name="android:backgroundTint">@color/black</item>
+        <item name="cornerRadius">30dp</item>
+        <item name="android:elevation">0dp</item>
+
+    </style>
+</resources>
